@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDelivery.MainPage"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI">
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill" Source="food.jpg"/>
+        <Grid BackgroundColor="#4f3f9b" Opacity=".9"/>
+        <Grid ColumnDefinitions="*,*"> 
+            <Image Aspect="AspectFit" Source="truck.png"
+                   HeightRequest="120"/>
+            <skia:SKLottieView Grid.Column="1"
+                               HeightRequest="100"
+                               RepeatCount="-1"
+                               Source="initialanimation.json"/>
+        </Grid >
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                            CornerRadius="30,30,0,0"
+                            Fill="White"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold"
+                       FontFamily="OpenSansRegular"
+                       FontSize="Medium"
+                       Text="Welcome"
+                       TextColor="#2d2d2d"/>
+                <Label FontAttributes="Bold"
+                       FontFamily="OpenSansRegular"
+                       FontSize="Medium"
+                       Text="Login to continue"
+                       TextColor="#a3a3a4"/>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
+                    <RoundRectangle BackgroundColor="#edebf6"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60"/>
+                    <Label HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold" Text="&#xf0e0;"
+                           FontFamily="AwesomeSolid"
+                           FontSize="44"
+                           TextColor="#4f3f9b"/>
+                    <Entry Grid.Column="1" 
+                        Placeholder="Email"
+                           Text="dotnetbot@mauidelivery.com"
+                           VerticalOptions="Center"
+                           />
+                    <!--<Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf0e0;"
+                                Size="44"
+                                Color="#4f3f9b"/>
+                        </Image.Source>
+                    </Image>-->
+                </Grid>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
+                    <RoundRectangle BackgroundColor="#edebf6"
+                    CornerRadius="10"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="60"/>
+                    <Label HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold" Text="&#xf084;"
+                           FontFamily="AwesomeSolid"
+                           FontSize="44"
+                           TextColor="#4f3f9b"/>
+                    <Entry Grid.Column="1" 
+                           Placeholder="Password"
+                           VerticalOptions="Center"
+                           IsPassword="True"
+                           Text="12345"/>
+             
+                </Grid>
+                <Button Margin="0,20,0,0"
+                        BackgroundColor="#4f3f9b"
+                        Text="Login"
+                        TextColor="#fbf6fd"
+                        HeightRequest="60"/>
+                <Label Margin="0,20,0,-10"
+                       Text="Forgot your password?"
+                       TextColor="Blue"
+                       HorizontalOptions="Center"
+                       TextDecorations="Underline"
+                       />
+
+                <Button Margin="0,20,0,0"
+                        BackgroundColor="#fbf6fd"
+                        Text="Create your Account"
+                        TextColor="#4f3f9b"
+                        HeightRequest="60"/>
+
+            </VerticalStackLayout>
+        </Grid>
+        
+    </Grid>
+
+    
+
+</ContentPage>
