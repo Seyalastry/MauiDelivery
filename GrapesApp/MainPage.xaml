@@ -37,7 +37,7 @@
                              TintOpacity=".2">
             <VerticalStackLayout Padding="35"
                                  VerticalOptions="Center"
-                                 BindableLayout.ItemsSource="{Binding GrapesInformation}">
+                                 BindableLayout.ItemsSource="{Binding GrapesInformations}">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                                      

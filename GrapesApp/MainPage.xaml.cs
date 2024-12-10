@@ -4,12 +4,15 @@ namespace GrapesApp
 {
     public partial class MainPage : ContentPage
     {
-        public List<GrapesInfo> GrapesInformation { get; set; }
+        public List<GrapesInfo> GrapesInformations { get; set; }
+        public GrapesInfo obj { get; set; }
 
         public MainPage()
         {
             InitializeComponent();
-            GrapesInformation = new List<GrapesInfo>
+            obj = new GrapesInfo { Micronutrient = "Vitamin E", Percentage = 25 };
+
+            GrapesInformations = new List<GrapesInfo>
             {
                 new GrapesInfo
                 {
@@ -37,6 +40,7 @@ namespace GrapesApp
                     Percentage = 5
                 },
             };
+            GrapesInformations.Add(obj);
             this.BindingContext = this;
         }
 
